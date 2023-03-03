@@ -1,0 +1,47 @@
+.contact {
+    background-color: #E3606E;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+
+    .wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        span {
+            text-transform: capitalize;
+        }
+
+        input {
+            padding: 10px;
+            border: none; 
+            border-radius: 5px 0 0 5px;
+        }
+
+        button {
+            padding: 10px;
+            color: white;
+            text-transform: uppercase;
+            background: #333;
+            border-radius:  0 5px 5px 0;
+            border: none;
+
+        }
+
+        .icons {
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .contact .wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
