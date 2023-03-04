@@ -5,51 +5,63 @@ import Card from '../Card/Card';
 import './FeaturedProducts.scss';
 // import axios from "axios";
 
-const FeaturedProducts = ({ type, content }) => {
+import WhiteModel1 from "../../assets/WhiteWoman.png";
+import WhiteModel2 from "../../assets/WhiteWoman2.png";
+import BlackModel1 from "../../assets/BlackWoman.png";
+import BlackModel2 from "../../assets/BlackWoman2.png";
+import MuslimModel1 from "../../assets/MuslimWoman.png";
+import MuslimModel2 from "../../assets/MuslimWoman2.png";
+import AsianModel1 from "../../assets/AsianWoman.png";
+import AsianModel2 from "../../assets/AsianWoman2.png";
 
-    // const data = [
-    //     {
-    //         id: 1,
-    //         img: "https://images.pexels.com/photos/1936854/pexels-photo-1936854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //         img2: "https://images.pexels.com/photos/859195/pexels-photo-859195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //         title: "Long Sleeve",
-    //         isNew: true,
-    //         oldPrice: 110,
-    //         price: 100,
-    //     },
-    //     {
-    //         id: 2,
-    //         img: "https://images.pexels.com/photos/1113554/pexels-photo-1113554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //         title: "Coat",
-    //         isNew: true,
-    //         oldPrice: 210,
-    //         price: 200,
-    //     },
-    //     {
-    //         id: 3,
-    //         img: "https://images.pexels.com/photos/1857375/pexels-photo-1857375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //         title: "Cardigan",
-    //         isNew: true,
-    //         oldPrice: 310,
-    //         price: 300,
-    //     },
-    //     {
-    //         id: 4,
-    //         img: "https://images.pexels.com/photos/1390600/pexels-photo-1390600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    //         title: "Pyjamas",
-    //         isNew: true,
-    //         oldPrice: 410,
-    //         price: 400,
-    //     },
-    //     {
-    //         id: 5,
-    //         img: "https://images.pexels.com/photos/6976660/pexels-photo-6976660.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    //         title: "Skirt",
-    //         isNew: true,
-    //         oldPrice: 510,
-    //         price: 500,
-    //     },
-    // ];
+const FeaturedProducts = ({ type, content, loading, error }) => {
+
+    const data = [
+        {
+            id: 1,
+            img: WhiteModel2,
+            img2: WhiteModel1,
+            title: "Red Gown",
+            isNew: true,
+            oldPrice: 93,
+            price: 73,
+        },
+        {
+            id: 2,
+            img: BlackModel1,
+            img2: BlackModel2,
+            title: "Brown Leather Coat",
+            isNew: true,
+            oldPrice: 144,
+            price: 124,
+        },
+        {
+            id: 3,
+            img: MuslimModel1,
+            img2: MuslimModel2,
+            title: "Green Abayas",
+            isNew: true,
+            oldPrice: 119,
+            price: 99,
+        },
+        {
+            id: 4,
+            img: AsianModel1,
+            img2: AsianModel2,
+            title: "White Ao Dai",
+            isNew: true,
+            oldPrice: 107,
+            price: 87,
+        },
+        // {
+        //     id: 5,
+        //     img: "https://images.pexels.com/photos/6976660/pexels-photo-6976660.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        //     title: "Skirt",
+        //     isNew: true,
+        //     oldPrice: 510,
+        //     price: 500,
+        // },
+    ];
 
     // const [data, setData] = useState([]); // we are refactoring our code base
     // i guess thats why it's good to participate in open source and or get code reviews
@@ -74,7 +86,7 @@ const FeaturedProducts = ({ type, content }) => {
     //   fetchData();
     // }, []);
 
-    const { data, loading, error } = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`);
+    // const { data, loading, error } = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`);
      
 
     return (
